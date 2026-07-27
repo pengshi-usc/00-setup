@@ -22,12 +22,12 @@ run `cd ~/dso576` again.
 ## 2. Clone this repo (downloads it into the folder)
 
 ```
-git clone https://github.com/pengshi-usc/dso576-setup-test.git
-cd dso576-setup-test
+git clone https://github.com/pengshi-usc/00-setup.git
+cd 00-setup
 pwd
 ```
 
-Now `pwd` should end in `/dso576/dso576-setup-test`.
+Now `pwd` should end in `/dso576/00-setup`.
 
 ## 3. Install the Python packages
 
