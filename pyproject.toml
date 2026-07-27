@@ -1,0 +1,12 @@
+# DSO-576 setup test project — students clone this during laptop setup to
+# verify that uv + Python + pandas install and run on their machine.
+# (This repo is a TEST harness only; weekly course material lives in the
+# per-week course repos shown on the course app's HW page.)
+[project]
+name = "dso576-setup-test"
+version = "1.0.0"
+description = "DSO-576 laptop-setup test: proves uv, Python, and pandas work"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0",
+]
