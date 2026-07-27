@@ -57,4 +57,13 @@ Every line should say `PASS`. If a line says `FAIL`, it tells you exactly
 which setup step to redo — fix it, then run `bash check_setup.sh` again
 until everything passes.
 
+## 6. See Streamlit run (we use it in class)
+
+```
+uv run streamlit hello
+```
+
+A demo app opens in your browser — that's Streamlit working. Back in the
+terminal, press `Ctrl+C` to stop it.
+
 That's it. When all checks pass, go back to the setup page and continue.

@@ -26,6 +26,9 @@ check "gh (GitHub tool)"           "gh --version"           "redo the 'Install t
 check "uv (Python manager)"        "uv --version"           "redo the 'Set up Python' step (install uv)"
 check "Python via uv"              "uv run python -V"       "run 'uv sync' in this folder first, then try again"
 check "pandas via uv"              "uv run python -c 'import pandas; print(\"pandas\", pandas.__version__)'" "run 'uv sync' in this folder first, then try again"
+check "streamlit via uv"           "uv run streamlit version"  "run 'uv sync' in this folder first, then try again"
+check "plotting (matplotlib+)"     "uv run python -c 'import matplotlib, plotly, seaborn; print(\"matplotlib\", matplotlib.__version__, \"plotly\", plotly.__version__, \"seaborn\", seaborn.__version__)'" "run 'uv sync' in this folder first, then try again"
+check "Excel readers"              "uv run python -c 'import openpyxl, xlrd; print(\"openpyxl\", openpyxl.__version__, \"xlrd\", xlrd.__version__)'" "run 'uv sync' in this folder first, then try again"
 check "VS Code 'code' command"     "code --version"         "open VS Code -> Cmd/Ctrl+Shift+P -> 'Shell Command: Install code command' (Mac) or reinstall VS Code with 'Add to PATH' checked (Windows)"
 check "Codex (AI coding agent)"    "codex --version"        "redo the 'Set up your AI tools' step (install Codex)"
 

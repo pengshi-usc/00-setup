@@ -9,4 +9,10 @@ description = "DSO-576 laptop-setup test: proves uv, Python, and pandas work"
 requires-python = ">=3.11"
 dependencies = [
     "pandas>=2.0",
+    "streamlit>=1.30",
+    "matplotlib>=3.8",
+    "plotly>=5.18",
+    "seaborn>=0.13",
+    "openpyxl>=3.1",
+    "xlrd>=2.0",
 ]
