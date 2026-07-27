@@ -28,7 +28,12 @@ check "Python via uv"              "uv run python -V"       "run 'uv sync' in th
 check "pandas via uv"              "uv run python -c 'import pandas; print(\"pandas\", pandas.__version__)'" "run 'uv sync' in this folder first, then try again"
 check "streamlit via uv"           "uv run streamlit version"  "run 'uv sync' in this folder first, then try again"
 check "plotting (matplotlib+)"     "uv run python -c 'import matplotlib, plotly, seaborn; print(\"matplotlib\", matplotlib.__version__, \"plotly\", plotly.__version__, \"seaborn\", seaborn.__version__)'" "run 'uv sync' in this folder first, then try again"
+check "plotting (altair)"          "uv run python -c 'import altair; print(\"altair\", altair.__version__)'" "run 'uv sync' in this folder first, then try again"
 check "Excel readers"              "uv run python -c 'import openpyxl, xlrd; print(\"openpyxl\", openpyxl.__version__, \"xlrd\", xlrd.__version__)'" "run 'uv sync' in this folder first, then try again"
+check "numpy via uv"               "uv run python -c 'import numpy; print(\"numpy\", numpy.__version__)'" "run 'uv sync' in this folder first, then try again"
+check "database (SQLAlchemy)"      "uv run python -c 'import sqlalchemy; from sqlalchemy import create_engine, text; e = create_engine(\"sqlite://\"); print(\"sqlalchemy\", sqlalchemy.__version__, \"query:\", e.connect().execute(text(\"select 1\")).scalar())'" "run 'uv sync' in this folder first, then try again"
+check "PostgreSQL driver"          "uv run python -c 'import psycopg2; print(\"psycopg2\", psycopg2.__version__)'" "run 'uv sync' in this folder first, then try again"
+check "requests (web)"             "uv run python -c 'import requests; print(\"requests\", requests.__version__)'" "run 'uv sync' in this folder first, then try again"
 check "VS Code 'code' command"     "code --version"         "open VS Code -> Cmd/Ctrl+Shift+P -> 'Shell Command: Install code command' (Mac) or reinstall VS Code with 'Add to PATH' checked (Windows)"
 check "Codex (AI coding agent)"    "codex --version"        "redo the 'Set up your AI tools' step (install Codex)"
 
