@@ -34,6 +34,7 @@ check "numpy via uv"               "uv run python -c 'import numpy; print(\"nump
 check "database (SQLAlchemy)"      "uv run python -c 'import sqlalchemy; from sqlalchemy import create_engine, text; e = create_engine(\"sqlite://\"); print(\"sqlalchemy\", sqlalchemy.__version__, \"query:\", e.connect().execute(text(\"select 1\")).scalar())'" "run 'uv sync' in this folder first, then try again"
 check "PostgreSQL drivers"         "uv run python -c 'import psycopg2, psycopg; print(\"psycopg2\", psycopg2.__version__, \"+ psycopg\", psycopg.__version__)'" "run 'uv sync' in this folder first, then try again"
 check "requests (web)"             "uv run python -c 'import requests; print(\"requests\", requests.__version__)'" "run 'uv sync' in this folder first, then try again"
+check "notebook cells (ipykernel)" "uv run python -c 'import ipykernel; print(\"ipykernel\", ipykernel.__version__)'" "run 'uv sync' in this folder first, then try again"
 check "VS Code 'code' command"     "code --version"         "open VS Code -> Cmd/Ctrl+Shift+P -> 'Shell Command: Install code command' (Mac) or reinstall VS Code with 'Add to PATH' checked (Windows)"
 check "Codex (AI coding agent)"    "codex --version"        "redo the 'Set up your AI tools' step (install Codex)"
 
