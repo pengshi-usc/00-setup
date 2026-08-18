@@ -1,0 +1,20 @@
+# Shell scripts MUST keep Unix (LF) line endings, on every platform.
+#
+# Git for Windows installs with core.autocrlf=true by default — which is what
+# `winget install --id Git.Git -e` gives a student, since a silent install
+# takes the installer's defaults. With autocrlf=true and no .gitattributes,
+# cloning this repo on Windows rewrites check_setup.sh with CRLF endings, and
+# Git Bash then fails on the carriage returns before running a single check:
+#
+#     check_setup.sh: line 2: $'\r': command not found
+#     check_setup.sh: line 12: syntax error near unexpected token `$'{\r''
+#
+# That is the last step of laptop setup, so it would greet every Windows
+# student with what looks like a broken script. `eol=lf` pins the checkout.
+*.sh text eol=lf
+
+# Keep the Python sources and the lock file LF too, so a diff never shows a
+# whole-file change just because it was edited on a different platform.
+*.py text eol=lf
+*.toml text eol=lf
+uv.lock text eol=lf
